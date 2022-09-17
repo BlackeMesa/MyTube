@@ -22,24 +22,13 @@ const handleSubmit = (e) => {
 }
 
   return (
-    <Paper component="form"
-    onSubmit={handleSubmit}
-    sx={{borderRadius: 20, border: '1px solid #e3e3e3', pl: 2, boxShadow: 'none', mr: { sm:5 }}}
-    >
-
-        <input 
-        className='search-bar'
-        placeholder='Search...'
-        Value={searchTerm}
-        onChange={(e) => setSearchTerm(e.target.value)}
-        />
-        <IconButton type="submit" sx={{ p: '10px', color: 'red'}}>
-
-            <Search />
-        </IconButton>
-        
+    <Paper component="form" onSubmit={handleSubmit} sx={{ borderRadius: 20, border: "1px solid #e3e3e3", pl: 2, boxShadow: "none",mr: {md: 5}, mt: {xs:2, sm: 2} }}>
+      <input className="search-bar" placeholder="Search..." Value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
+      <IconButton type="submit" sx={{ p: "10px", color: "red" }}>
+        <Search />
+      </IconButton>
     </Paper>
-  )
+  );
 }
 
 export default SearchBar

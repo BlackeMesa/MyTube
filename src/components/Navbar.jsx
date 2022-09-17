@@ -10,9 +10,9 @@ import SearchBar from './SearchBar'
 
 function Navbar() {
   return (
-    <Stack direction="row" alignItems="center" p={2} sx={{ position: "sticky", background: "#000", top: 0, justifyContent: "space-between" }}>
+    <Stack alignItems="center" p={2} sx={{ position: "sticky", background: "#000", top: 0, justifyContent: "space-between", flexDirection: { sx: "column", md: "row" } }}>
       <Link to="/" style={{ display: "flex", alignItems: "center" }}>
-        <Box sx={{ display: "flex"}}>
+        <Box sx={{ display: "flex" }}>
           <img src={logo} alt="logo" height={45} />
           <Typography variant="h4" fontWeight="bold" ml={2} sx={{ color: "white" }}>
             MyTube
